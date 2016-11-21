@@ -27,12 +27,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final EditText etNome = (EditText) findViewById(R.id.etNome);
+
         Button btOutra = (Button) findViewById(R.id.btSegunda);
         btOutra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this,SegundaActivity.class);
+                intent.putExtra("nome",etNome.getText().toString());
                 startActivity(intent);
             }
         });
