@@ -27,5 +27,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btOutra = (Button) findViewById(R.id.btSegunda);
+        btOutra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,SegundaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
